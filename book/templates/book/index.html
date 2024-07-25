@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Book list</title>
+</head>
+
+<body>
+<h1 style="background-color: aliceblue;text-align: center">Welcome to the best website</h1>
+        <div>
+            {% for book in books %}
+                Name : <a href="{% url 'book_detail' book.id %}">{{ book.title }}</a> <br>
+                Author : {{ book.author }} <br>
+                <hr>
+            {% endfor %}
+
+        </div>
+
+</body>
+
+</html>
